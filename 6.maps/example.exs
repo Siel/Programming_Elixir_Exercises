@@ -27,3 +27,11 @@ person = %{name: "Dave", height: 1.88}
 %{name: "Dave"}=person
 #pero este no hace match
 %{name: _, weight: _}=person
+
+#updating a map
+new_map = %{old_map|key=>value,...}
+#esta sintaxis no sirve para agregar nuevos elementos al map
+m=%{a: 1, b: 2, c: 3}
+m1=%{m|a: "one"}#=> %{a: "one", b:2, c:3}
+#para agregar nuevos elementos al map hay que usar
+#Map.put_new/3

@@ -23,3 +23,20 @@ people = [
 
 people
 |> Enum.each(&HotelRoom.book/1)
+
+#Pattern matching can´t bind keys:
+##You can do this:
+%{2 => state} = %{1=> :ok, 2=> :error}
+#state => :error
+
+##but you can't to this:
+%{item => :ok} = %{1=> :ok, 2=> :error}
+#Error
+
+#Matching keys (lo mismo de arriba pero dinamico)
+
+data = %{name: "Dave", likes: "elixir"}
+for key <- [:name,:likes] do#este for retorna una lista
+    %{^key=>value}=data#recordar que ^usa un valor previo existente
+    value#retorno
+end
