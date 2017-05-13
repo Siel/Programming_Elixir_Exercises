@@ -47,7 +47,7 @@ Enum.sort(["there","was","a","crooked","man"])
 Enum.sort(["there","was","a","crooked","man"],
             fn(a,b)-> String.length(a)<=String.length(b) end)
 #["a", "was", "man", "there", "crooked"]
-##En sort es importante que el condicional sea <=
+#En sort es importante que el condicional sea <=
 #ya que dejar opcione slibres puede provocar resultados inesperados
 Enum.max(["there","was","a","crooked","man"])
 #was
