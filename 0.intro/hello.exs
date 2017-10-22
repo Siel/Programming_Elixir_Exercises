@@ -11,6 +11,9 @@ IO.puts a
 IO.puts b
 IO.puts c
 
+list1 = [3,2,1]
+list2 = [4 | list1]
+
 #Concatenacion
 [1,2,3]++[1,2,3]
 [1,2,3,4]--[2,4]#=>[1,3] Diferencia
@@ -26,4 +29,5 @@ a[:nombre]
 #si el key es un atom, entonces
 #a=%{key: value, key: value}
 #a.key o a[:key]
+#a.key solo funciona cuando key es un atom.
 

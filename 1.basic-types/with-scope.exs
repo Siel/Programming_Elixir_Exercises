@@ -1,5 +1,6 @@
 content = "Now is the time"
 
+#with defines its own scope.
 lp = with {:ok,file} = File.open("passwd"),
     content    = IO.read(file, :all),
     :ok        = File.close(file),
